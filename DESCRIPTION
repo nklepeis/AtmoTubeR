@@ -9,7 +9,7 @@ Description: This package has functions to read and plot sensor streams and loca
     based on established formats and published API's.  Sensor data include particulates, VOC's, 
     temperature, pressure, and humidity - as well as GPS coordinates.
 Dependencies: tidyr,dplyr,jsonlite,ggplot2,lubridate,maps,sp,osmdata,sf,timetk,googlesheets4,
-leaflet,sensoRplot,readr,
+leaflet,sensoRplot,readr
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
