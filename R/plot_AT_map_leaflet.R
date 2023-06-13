@@ -13,9 +13,7 @@
 
 plot_AT_map_leaflet <- function(data) {
 
-  library(leaflet)
-  library(lubridate)
-  library(dplyr)
+
 
   data <- data %>%
     select(`Date (GMT)`, starts_with(c("Latitude","Longitude"))) %>%
