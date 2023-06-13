@@ -50,8 +50,6 @@
 get_AT_cloud_data_multi <- function(key, macs, dates=as.character(Sys.Date()),
                                     limit=1000, format="csv") {
 
-  require(tidyverse)
-
   data <- tibble()
 
   for (m in macs) {

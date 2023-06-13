@@ -34,9 +34,6 @@ plot_AT_streams <- function(data,
                     by="1 day", tz = "America/Los_Angeles",
                      ...) {
 
-  library(sensoRplot)
-  library(tidyverse)
-
   data <- data %>%
     select(all_of(time.col), starts_with(id.cols), starts_with(cols)) %>%
         pivot_longer(

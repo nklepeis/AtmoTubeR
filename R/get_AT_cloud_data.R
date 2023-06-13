@@ -53,10 +53,6 @@
 get_AT_cloud_data <- function(key, mac, limit=1000, offset=0, format="csv",
                         order="desc", date=NULL, ...) {
 
-  library(jsonlite)
-  library(lubridate)
-  library(tidyverse)
-
   baseURL <- "https://api.atmotube.com/api/v1/data?"
 
   url <- paste0(baseURL, "api_key=", key, "&mac=", mac,

@@ -39,10 +39,6 @@ plot_AT_map_ggplot <- function(data, by="1 day", streets=TRUE,
                         place=TRUE, water=TRUE, rail=TRUE,
                         building=TRUE) {
 
-  library(tidyverse)
-  library(osmdata)
-  library(sf)
-  library(timetk)
 
   #  Make the map data
 
