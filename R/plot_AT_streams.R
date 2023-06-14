@@ -13,6 +13,11 @@
 #' @param by, string giving the time window for faceting, e.g., "1 day", "1 month",
 #' default to "1 day"
 #' @param tz the time zone
+#' @param facet.response facet by the response var
+#' @param area plot area
+#' @param step plot steps
+#' @param line plot lines
+#' @param ... other arguments to plot_streams_ggplot
 #'
 #' @author Neil E. Klepeis
 #'
@@ -32,6 +37,8 @@ plot_AT_streams <- function(data,
                     id.cols = "Mac",
                     time.col = "Date (GMT)",
                     by="1 day", tz = "America/Los_Angeles",
+                    facet.response = TRUE,
+                    area=FALSE, step=FALSE, line=TRUE,
                      ...) {
 
   data <- data %>%
@@ -48,9 +55,9 @@ plot_AT_streams <- function(data,
   cat("AT Data to plot:\n")
   print(data)
 
-  plot_streams_ggplot(data, area=FALSE, step=FALSE, line=TRUE,
+  plot_streams_ggplot(data, area=area, step=step, line=line,
                       calendar = FALSE,
-                      facet.response=TRUE,
+                      facet.response=facet.response,
                        ...) +
     theme_streams_dark()
 
